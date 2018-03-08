@@ -996,6 +996,7 @@ svg3 = d3.select("#area3")
                 "translate(" + margin.left+40 + "," + margin.top + ")");
   function Volatility(){
     d3.csv("datav.csv", function(error, data) {
+      data=data.splice(data.length-choice3,data.length)
   if (error) throw error;
     
     var VolatilityCrypto="";
